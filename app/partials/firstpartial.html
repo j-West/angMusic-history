@@ -1,1 +1,63 @@
-<h1 class="text-center">First Partial</h1>
+
+
+<!---- Side filter ---->
+<div id="formDiv">
+
+  <form> <!-- Maybe change to Div depending on furute requirements -->
+    <label for="range">Song length:</label>
+    <input type="range" id="range" name="songLengthRange">
+
+    <label>Artist:</label>
+    <select ng-model="artistSel">
+      <option></option>
+      <option>ZZ Top</option>
+      <option>Super Tramp</option>
+      <option>Pink Floyd</option>
+      <option>Guns & Roses</option>
+      <option>Alanis Morisette</option>
+    </select>
+
+    <label>Album:</label>
+    <select ng-model="albumSel">
+      <option></option>
+      <option>Breakfast in america</option>
+      <option>The Wall</option>
+      <option>Appetite for Destruction</option>
+      <option>Big Baby D.R.A.M.</option>
+      <option>Jagged Little Pill</option>
+    </select>
+
+    <label>Genre:</label>
+    <div class="floatL flexStart">
+      <label><input type="checkbox" class="floatR" name="genre">Rock</label>
+      <label><input class="floatR" type="checkbox" name="genre">Pop</label>
+      <label><input type="checkbox" class="floatR" name="genre">Blues</label>
+    </div>
+
+    <div class="flexStart">
+      <label class="floatR"><input class="floatR" type="checkbox" name="genre">Clasical</label>
+      <label class="floatR"><input type="checkbox" class="floatR" name="genre">Jazz</label>
+      <label class="floatR"><input class="floatR" type="checkbox" name="genre">Hip Hop</label>
+    </div>
+
+    <button class="clearB">Filter</button>
+
+
+  </form>
+</div> <!---- End Side Filter ---->
+
+<div class="mainDiv">
+  <input type="text"  class="searchEl form-control" placeholder="Search" ng-model="searchInput">
+  <!---- Songs ---->
+  <div class="songDiv" ng-repeat="song in songs | filter : searchInput || artistSel || albumSel">
+    <h2><a href="#/second" ng-click="setSelected(song)">{{ song.title }}</a></h2>
+    <button id="delButton" class=" btn btn-danger floatR" ng-click="remove(song)">Delete</button>
+    <ul class="musicInfo">
+      <li>{{ song.artist }}</li>
+      <li>{{ song.album }}</li>
+      <li class="no-borderR">{{ song.genre }}</li>
+    </ul>
+
+
+  </div> <!---- End Songs ---->
+</div>

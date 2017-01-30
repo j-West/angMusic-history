@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-  <link rel="stylesheet" href="app/lib/bootstrap/dist/css/bootstrap.css">
+
   <link rel="stylesheet" href="app/styles/main.css">
 </head>
 <body ng-app="myApp">
 
 <!------- START NAVBAR ------->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#/">First</a></li>
-        <li><a href="#/second">Second</a></li>
-        <li><a href="#/third">Third</a></li>
+<div id="wrapper">
+      <ul id="navBar">
+        <a href="#/"><li>View Music</li></a>
+       <a href="#/second"><li>Add Music</li></a>
+        <a href="#/third"><li>Profile</li></a>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav> <!------- END NAVBAR ------->
 
-<div class="container">
+
   <div ng-view></div>
+
 </div>
 <script src="app/lib/angular/angular.js"></script>
 <script src="app/lib/angular-route/angular-route.js"></script>
@@ -31,7 +27,7 @@
 <script src="app/controllers/first.js"></script>
 <script src="app/controllers/second.js"></script>
 <script src="app/controllers/third.js"></script>
-<script src="app/factories/getFactory.js"></script>
+<script src="app/factories/firstFactory.js"></script>
 
 </body>
 </html>

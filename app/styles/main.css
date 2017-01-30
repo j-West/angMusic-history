@@ -1,0 +1,214 @@
+/***** Page Wrapper *****/
+
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/***** Nav Bar *****/
+
+
+#navBar {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #FFB4B0;
+    padding: 1em 0;
+    border: 2px solid black;
+}
+
+#navBar li {
+    list-style: none;
+    margin-right: .25em;
+}
+
+#navBar li:not(.no-borderR) {
+    border-right: 2px solid black;
+    padding-right: .25em;
+}
+
+#navBar a {
+    text-decoration: none;
+}
+
+#navBar:first-child {
+    padding-left: 1em;
+}
+
+
+/***** Main content -- Left side/form *****/
+
+form {
+    float: left;
+    background-color: #4DD7FA;
+    border: 2px solid black;
+    width: 20%;
+}
+
+label {
+    display: block;
+    padding: 1em 1em .5em;
+}
+
+input[type="range"] {
+    margin: 0 1em;
+    width: 85%;
+    border: 2px solid black;
+}
+
+input[type="checkbox"] {
+    margin-left: .5em;
+}
+
+select {
+    margin: 0 1em;
+    width: 85%;
+    border: 2px solid black;
+}
+
+.floatL {
+    float: left;
+}
+
+.floatR {
+    float: right;
+}
+
+
+form button {
+    display: block;
+    margin: 1em auto;
+    font-size: 1.1em;
+    padding: .1em 2em;
+    border: 2px solid black;
+    border-radius: 7%;
+}
+
+.clearB {
+    clear: both;
+}
+
+
+/***** Main content -- Right side *****/
+
+.mainDiv {
+    border: 2px solid black;
+    float: left;
+    display: inline;
+    background-color: #FEFAC0;
+    margin-left: 3%;
+    width: 76%;
+    /*display: none;*/
+}
+
+.searchEl {
+    width: 75%;
+    display: block;
+    margin: .5em auto 0;
+}
+
+.viewSongDiv {
+    text-align: center;
+}
+
+.viewSongDiv ul {
+    display: block;
+    padding-left: 0;
+}
+
+.viewSongDiv ul li {
+    list-style: none;
+    margin-right: 1.5em;
+}
+
+.songDiv a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mainDiv h2 {
+    margin-left: 1.5em;
+}
+
+.musicInfo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.musicInfo li {
+    list-style: none;
+    margin-right: 1.5em;
+}
+
+.musicInfo li:not(.no-borderR) {
+    border-right: 2px solid black;
+    padding-right: 1em;
+}
+
+
+/***** Add Music View *****/
+
+.add-music-view {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 5em auto;
+    text-align: center;
+}
+
+.add-music-view input {
+    border: 2px solid black;
+    float: right;
+    height: 2em;
+    width: 15em;
+}
+
+/***** Display: none *****/
+
+.hidden {
+    display: none;
+}
+
+
+/***** Media queries *****/
+
+@media only screen and (max-width: 1120px) {
+    #mainDiv {
+        width: 65.5%;
+    }
+
+    form {
+        width: 30%;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    #wrapper {
+        width: 100%;
+
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #mainDiv {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #navBar {
+        justify-content: center;
+    }
+
+    .flexStart {
+        display: flex;
+        justify-content: center;
+        float: none;
+    }
+
+    .floatL {
+        float: none;
+    }
+}

@@ -1,4 +1,6 @@
-app.controller("SecondCtrl", function($scope) {
+app.controller("SecondCtrl", function($scope, firstFactory) {
   console.log("SecondCtrl")
+
+   $scope.selectedSong = firstFactory.getSelectedSong()
 
 })
